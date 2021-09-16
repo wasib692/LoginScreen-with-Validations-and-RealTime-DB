@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">LoginSscreen</string>
+    <string name="phone_no">Phone No</string>
+    <string name="password">Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="signup_to_start_your_journey">SignUp To Start Your Journey</string>
+    <string name="welcome">WELCOME</string>
+    <string name="go">GO</string>
+    <string name="already_have_an_account_login">Already have an account? LogIn</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+</resources>
