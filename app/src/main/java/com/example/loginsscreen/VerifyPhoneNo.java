@@ -1,7 +1,11 @@
 package com.example.loginsscreen;
 
+import static android.R.*;
+import static android.R.layout.*;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import java.*;
 
 import android.app.Activity;
@@ -24,6 +28,7 @@ import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
+
 import android.R;
 import android.R.layout;
 
@@ -34,14 +39,15 @@ public class VerifyPhoneNo extends AppCompatActivity {
     String verificationCodeBySystem;
     private FirebaseAuth mAuth;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(layout.activity_verify_phone_no);
+        setContentView(R.layout.activity_verify_phone_no);
         //create hooks
-        verify_button = findViewById(R.id.verify_btn);
-        progressBar = findViewById(R.id.progress_bar);
-        OTP_enteredByUser = findViewById(R.id.otp_entered_by_user);
+        verify_button = findViewById(id.verify_btn);
+        progressBar = findViewById(id.progress_bar);
+        OTP_enteredByUser = findViewById(id.otp_entered_by_user);
 
         //receive phoneNo from sign up screen
         String phoneNo = getIntent().getStringExtra("phoneNo");
@@ -52,7 +58,7 @@ public class VerifyPhoneNo extends AppCompatActivity {
 
     private void sendOTPtoUser(String phoneNo) {
 
-        
+
         PhoneAuthOptions options =
                 PhoneAuthOptions.newBuilder(mAuth)
                         .setPhoneNumber("+92" + phoneNo)       // Phone number to verify
